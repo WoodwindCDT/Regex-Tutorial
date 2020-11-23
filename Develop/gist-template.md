@@ -18,15 +18,12 @@ Welcome to my RegEx Tutorial! I have above an example of a [RegEx Expression](ht
 - [Character Classes](#character-classes)
 - [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
 
 ## The Regex Components
 
 ### Anchors
 
-From the beginning, the first and last symbols are **^** && **$**. These specifically are known as **Line/String Anchors**. They are very special, as they are not meant to match characters, but to match the position of them in a [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or [\n](https://forum.freecodecamp.org/t/how-to-add-new-line-in-string/17763)
+From the beginning, the first and last symbols are **^** && **$**. These specifically are known as **Line/String Anchors**. They are very special, as they are not meant to match characters, but to match the position of them in a [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or [\n](https://forum.freecodecamp.org/t/how-to-add-new-line-in-string/17763).
 
 For Example:
 ```
@@ -80,15 +77,17 @@ For Example:
 ```
 $/g
 ```
-> This specific flag searches globally to match _all_ instances rather than stopping after the first match
+> This specific flag searches globally to match _all_ instances rather than stopping after the first match.
 
 ### Grouping and Capturing
 
-### Bracket Expressions
+In the expression, Grouping and Capturing are found using **()** as a means to specify/consolidate which information we want to capture. Any subpattern inside a pair of these parentheses will be captured within a 'group.'
 
-### Greedy and Lazy Match
-
-### Boundaries
+For Example:
+```
+([a-f0-9]{6}|[a-f0-9]{3})
+```
+> This specifies _within the brackets_ that we are looking for and extracting strings consisting of a-z and 0-9 criteria and plating them as **Capture Groups**. 
 
 ## Author
 
