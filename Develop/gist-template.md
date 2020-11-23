@@ -36,11 +36,21 @@ For Example:
 ^ - Beginning
 $ - End
 ```
-> Matches any string with the combined characters **abc** at the _beginning_ or _end_. 
+> Matches any string with the combined characters **abc** at the _beginning_ or _end_.
 
 ### Quantifiers
 
+Quantifiers are used to match the scope of a term which precedes it. You **must** place these quantifiers at the end of your desired scope, as they are looking for anything to match before its placement.
 
+```
+[a-f0-9]{3}
+```
+> Matches any string consisting of lowercase characters between a-f and digits between 0-9 **At 3 total characters {3}**.
+
+```
+#?
+```
+> Another Quantifier **?**, matches between 0 and 1 characters of the preceeding expression boundaries **#**.
 
 ### OR Operator
 
