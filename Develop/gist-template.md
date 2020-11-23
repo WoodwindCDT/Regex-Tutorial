@@ -3,7 +3,7 @@
 Howdy! Look _below!_
 
 ```
-/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/g
 ```
 
 ## Summary
@@ -21,8 +21,6 @@ Welcome to my RegEx Tutorial! I have above an example of a [RegEx Expression](ht
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## The Regex Components
 
@@ -64,8 +62,25 @@ Seen in our Example:
 
 ### Character Classes
 
+In the expression, we find character classes are popular! Character classes zone in on any specific character set, combination, any digit, and [more](https://www.regular-expressions.info/charclass.html).
+
+For exmaple:
+```
+[a-f0-9]
+[a-f] - lowercase character set from a through f
+[0-9] - digit set from  0-9
+```
+> Matches any string consisting of lowercase characters between a-f and digits between 0-9. You can combine and manipulate this method to match many different criteria, making it very dynamic!
 
 ### Flags
+
+In a RegEx, a Flag can be very influential for how it interprets its search. Flags tend to follow the closing **/** towards the end of an expression.
+
+For Example:
+```
+$/g
+```
+> This specific flag searches globally to match _all_ instances rather than stopping after the first match
 
 ### Grouping and Capturing
 
@@ -74,10 +89,6 @@ Seen in our Example:
 ### Greedy and Lazy Match
 
 ### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
 
 ## Author
 
